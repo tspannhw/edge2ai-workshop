@@ -309,8 +309,11 @@ sudo systemctl start mosquitto
 
 # Simulator
 sudo cd ~
-sudo git clone https://github.com/asdaraujo/edge2ai-workshop.git
+sudo git clone https://github.com/tspannhw/edge2ai-workshop.git
 sudo cp edge2ai-workshop/mqtt.* ~
+sudo mkdir /opt/demo
+sudo chmod -R 775 /opt/demo
+sudo cp edge2ai-workshop/simulate.py /opt/demo/
 
 # MiNiFi Install
 sudo cd ~
