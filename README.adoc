@@ -51,12 +51,9 @@ Below a screenshot of Chrome open with 8 tabs, one for each service.
 image::images/browser.png[width=800]
 
 [[lab_1, Lab 1]]
-== Lab 1 - NiFi: setup machine sensors simulator 
+== Lab 1 - Apache NiFi: setup machine sensors simulator 
 
-In this lab you will run a simple Python script that simulates IoT sensor data from some hypothetical machines, and send the data to a MQTT broker (link:https://mosquitto.org/[mosquitto]). The gateway host is connected to many and different type of sensors, but they generally all share the same transport protocol, `mqtt`.
-----
-
-You will go to Apache NiFi and add a Processor (ExecuteProcess).   You will then right-click and set the properties shown below to run our Python simulate script.
+In this lab you will run a simple Python script that simulates IoT sensor data from some hypothetical machines, and send the data to a MQTT broker (link:https://mosquitto.org/[mosquitto]). The gateway host is connected to many and different type of sensors, but they generally all share the same transport protocol, "mqtt". You will go to Apache NiFi and add a Processor (ExecuteProcess).   You will then right-click and set the properties shown below to run our Python simulate script.
 
 image::images/simulate1.png[width=400]
 
@@ -79,13 +76,16 @@ You'll see the following parameters in the *MiNiFi Command & Control Configurati
 * `nifi.c2.agent.identifier` - Unique Id of this MiNiFi agent-iot-1
 
 . You might want to check the logs to confirm all is good:
+
 +
 [source,shell]
 ----
 egrep -A1 "Processor Type|MQTT" /opt/cloudera/cem/minifi/logs/minifi-app.log
 ----
 +
+
 If the MQTT Processors loaded successfully you should see them listed in the "Processor Type" section of the log:
+
 +
 [source,shell]
 ----
