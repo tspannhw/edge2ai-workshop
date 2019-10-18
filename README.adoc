@@ -918,6 +918,19 @@ image::images/test_model.png[width=800]
 
 == Troubleshooting
 
+
+==== *MiNiFi Not Sending Messages *
+
+* Make sure you pick S2S not RAW in Cloud Connection to NiFi
+* Make sure No Spaces Before or After Destination ID, URL, Names, Topics, Brokers, Etc... 
+* Make sure No Spaces Anywhere
+* Everything is Case-Sensitive.   It's IoT, not iot.
+* Use User=Admin for CDSW and HUE
+* You must have HDFS User Created via HUE, Go there First
+* Check all your connections and spellings
+* Check /opt/cloudera/cem/minifi/logs/minifi-app.log if you can't find an issue
+
+
 ==== *CEM doesn't pick up new NARs*
 
 . Delete the agent manifest manually using the EFM API:
