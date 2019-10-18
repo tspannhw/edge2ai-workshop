@@ -18,8 +18,7 @@ image::images/iot.png[width=800]
 * *Lab 8* - Use NiFi to process each record, calling the **Model endpoint** and save results to **Kudu**.
 * *Lab 9* - On the CDH cluster, process each record using **Spark Streaming**, calling the **Model endpoint** and save results to **Kudu**.
 * *Lab 10* - On the CDH cluster, pull reports on upcoming predicted machine failures using **Impala** and **Hue**.
-* *Lab 11* - On the **CDSW** cluster, train your model with the **Experiment** feature.
-* *Lab 12* - On the **CDSW** cluster, deploy the model into production with the **Model** feature.
+
 
 ===== Pre-requisites
 
