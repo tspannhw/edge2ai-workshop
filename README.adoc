@@ -448,12 +448,9 @@ At this point, the messages are already in the Kafka topic. You can add more pro
 
 Now that our NiFi flow is pushing data to Kafka, it would be good to have a confirmation that everything is running as expected. In this lab you will use Streams Messaging Manager (SMM) to check and monitor Kafka.
 
-. Start the simulator again and confirm you can see the messages queued in NiFi. Leave it running.
+. Start the (NiFi ExecuteProcess) simulator again and confirm you can see the messages queued in NiFi. Leave it running.
 +
-[source]
-----
-python mqtt.iot_simulator.py mqtt.iot.config
-----
+
 
 . Go to the Stream Messaging Manager (SMM) Web UI and familiarize yourself with the options there. Notice the filters (blue boxes) at the top of the screen.
 +
