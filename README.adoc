@@ -64,7 +64,15 @@ image::images/simulate2.png[width=400]
 
 In the Scheduling Tab, set to Run Schedule:    1 sec
 
+You could set that to 1 sec, 30 sec, 1 min.
+
 Include no extra spaces!
+
+Tab: Settings
+
+Automatically Terminate Relationships:   [x] Success
+
+Make sure you terminate so you can run
 
 
 [[lab_2, Lab 2]]
