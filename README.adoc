@@ -55,9 +55,16 @@ image::images/browser.png[width=800]
 
 In this lab you will run a simple Python script that simulates IoT sensor data from some hypothetical machines, and send the data to a MQTT broker (link:https://mosquitto.org/[mosquitto]). The gateway host is connected to many and different type of sensors, but they generally all share the same transport protocol, "mqtt". You will go to Apache NiFi and add a Processor (ExecuteProcess).   You will then right-click and set the properties shown below to run our Python simulate script.
 
+Command: python
+Command Arguments:   /opt/demo/simulate.py
+
 image::images/simulate1.png[width=400]
 
 image::images/simulate2.png[width=400]
+
+In the Scheduling Tab, set to Run Schedule:    1 sec
+
+Include no extra spaces!
 
 
 [[lab_2, Lab 2]]
