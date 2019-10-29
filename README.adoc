@@ -6,6 +6,52 @@ In this workshop, you will build a full OT to IT workflow for an **IoT Predictiv
 
 image::images/iot.png[width=800]
 
+== Troubleshooting
+
+* Everything is Case-Sensitive. 
+
+==== *MiNiFi Not Sending Messages *
+
+* Make sure you pick S2S not RAW in Cloud Connection to NiFi
+* Make sure No Spaces Before or After Destination ID, URL, Names, Topics, Brokers, Etc... 
+* Make sure No Spaces Anywhere
+* Everything is Case-Sensitive.   It's IoT, not iot.
+* Use User=Admin for CDSW and HUE
+* You must have HDFS User Created via HUE, Go there First
+* Check all your connections and spellings
+* Check /opt/cloudera/cem/minifi/logs/minifi-app.log if you can't find an issue
+
+
+==== *CEM doesn't pick up new NARs*
+
+. Delete the agent manifest manually using the EFM API:
+
+. Verify each class has the same agent manifest ID:
++
+[source]
+----
+http://hostname:10080/efm/api/agent-classes
+[{"name":"iot1","agentManifests":["agent-manifest-id"]},{"name":"iot4","agentManifests":["agent-manifest-id"]}]
+----
+
+. Confirm the manifest doesn't have the NAR you installed
++
+[source]
+----
+http://hostname:10080/efm/api/agent-manifests?class=iot4
+[{"identifier":"agent-manifest-id","agentType":"minifi-java","version":"1","buildInfo":{"timestamp":1556628651811,"compiler":"JDK 8"},"bundles":[{"group":"default","artifact":"system","version":"unversioned","componentManifest":{"controllerServices":[],"processors":
+----
+
+. Call the API endpoint:
++
+[source]
+----
+http://hostname:10080/efm/swagger/
+----
+
+. Hit the `DELETE - Delete the agent manifest specified by id` button, and in the id field, enter `agent-manifest-id
+
+
 ===== Labs summary:
 
 * *Lab 1* - On the Apache NiFi, run a simulator to send IoT sensors data to the MQTT broker.
