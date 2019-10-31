@@ -120,6 +120,14 @@ Automatically Terminate Relationships:   [x] Success
 
 Make sure you terminate so you can run
 
+image::NiFiDataProvenance.png[width=400]
+image::NiFiSettingsSetNiFiRegistry.png[width=400]
+image::NiFiViewDataProvenance.png[width=400]
+image::efmEventDetails.png[width=400]
+image::efmSetCloudConfiguration.png[width=400]
+image::nifiTerminateRelationships.png[width=400]
+image::rpgCloudConfiguration.png[width=400]
+image::runSimulator1or30.png[width=400]
 
 
 
