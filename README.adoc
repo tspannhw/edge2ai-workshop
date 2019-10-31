@@ -104,9 +104,9 @@ In this lab you will run a simple Python script that simulates IoT sensor data f
 Command: python
 Command Arguments:   /opt/demo/simulate.py
 
-image::images/simulate1.png[width=400]
+image::images/simulate1.png[width=800]
 
-image::images/simulate2.png[width=400]
+image::images/simulate2.png[width=800]
 
 In the Scheduling Tab, set to Run Schedule:    1 sec
 
