@@ -118,17 +118,15 @@ Tab: Settings
 
 Automatically Terminate Relationships:   [x] Success
 
-Make sure you terminate so you can run
+Make sure you terminate so you can run.
 
-image::NiFiDataProvenance.png[width=400]
-image::NiFiSettingsSetNiFiRegistry.png[width=400]
-image::NiFiViewDataProvenance.png[width=400]
-image::efmEventDetails.png[width=400]
-image::efmSetCloudConfiguration.png[width=400]
-image::nifiTerminateRelationships.png[width=400]
-image::rpgCloudConfiguration.png[width=400]
-image::runSimulator1or30.png[width=400]
+image::nifiTerminateRelationships.png[width=800]
 
+image::NiFiDataProvenance.png[width=800]
+
+image::NiFiViewDataProvenance.png[width=800]
+
+image::runSimulator1or30.png[width=800]
 
 
 [[lab_3, Lab3]]
@@ -139,6 +137,13 @@ Cloudera Edge Flow Management gives you a visual overview of all MiNiFi agents i
 . Open the EFM Web UI at http://<public_dns>:10080/efm/ui/. Ensure you see your minifi agent's heartbeat messages in the **Events Monitor**.
 +
 image::images/cem_heartbeats.png[width=800]
+
+
+image::efmEventDetails.png[width=800]
+
+image::efmSetCloudConfiguration.png[width=800]
+
+image::rpgCloudConfiguration.png[width=800]
 
 . You can then select the **Flow Designer** tab (image:images/flow_designer_icon.png[width=30]). To build a dataflow, select the desired class (`iot-1`) from the table and click OPEN.  Alternatively, you can double-click on the desired class.
 
@@ -201,6 +206,9 @@ image::images/cem_first_version.png[width=800]
 . Go back to the *NiFi Registry* Web UI and click on the *NiFi Registry* name, next to the Cloudera logo. If the flow publishing was successful, you should see the flow's version details in the NiFi Registry.
 +
 image::images/flow_in_nifi_registry.png[width=800]
+
+image::NiFiSettingsSetNiFiRegistry.png[width=800]
+
 
 . At this point, you can test the edge flow up until NiFi. Start the NiFi (ExecuteProcess) simulator again and confirm you can see the messages queued in NiFi.
 +
