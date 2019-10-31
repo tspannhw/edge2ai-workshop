@@ -68,7 +68,7 @@ http://hostname:10080/efm/swagger/
 
 * Laptop with a supported OS (Windows 7 not supported).
 * Ability to SSH into remote hosts from Windows or Mac. For Windows machines, install Putty or even better link:https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse[install OpenSSH for PowerShell].
-* A modern browser like Google Chrome (IE not supported).
+* A modern browser like Google Chrome or Firefox (IE not supported).
 
 ===== Connecting to your cluster
 
