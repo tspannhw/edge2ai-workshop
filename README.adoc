@@ -1,4 +1,4 @@
-= EDGE2AI Workshop
+= EDGE2AI CDF  Workshop
 
 == Introduction
 
@@ -67,7 +67,6 @@ http://hostname:10080/efm/swagger/
 ===== Pre-requisites
 
 * Laptop with a supported OS (Windows 7 not supported).
-* Ability to SSH into remote hosts from Windows or Mac. For Windows machines, install Putty or even better link:https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse[install OpenSSH for PowerShell].
 * A modern browser like Google Chrome or Firefox (IE not supported).
 
 ===== Connecting to your cluster
@@ -99,12 +98,15 @@ image::images/browser.png[width=800]
 [[lab_1, Lab 1]]
 == Lab 1 - Apache NiFi: setup machine sensors simulator 
 
-In this lab you will run a simple Python script that simulates IoT sensor data from some hypothetical machines, and send the data to a MQTT broker (link:https://mosquitto.org/[mosquitto]). The gateway host is connected to many and different type of sensors, but they generally all share the same transport protocol, "mqtt". You will go to Apache NiFi and add a Processor (ExecuteProcess).   You will then right-click and set the properties shown below to run our Python simulate script.
+In this lab you will run a simple Python script that simulates IoT sensor data from some hypothetical machines, and send the data to a MQTT broker (link:https://mosquitto.org/[mosquitto]). The gateway host is connected to many and different type of sensors, but they generally all share the same transport protocol, "mqtt". You will go to Apache NiFi and add a Processor (ExecuteProcess) to the canvas.   You will then right-click and set the properties shown below to run our Python simulate script.
 
-Command: python
-Command Arguments:   /opt/demo/simulate.py
+**Command**:   python
+
+**Command Arguments: **  /opt/demo/simulate.py
 
 image::images/simulate1.png[width=800]
+
+
 
 image::images/simulate2.png[width=800]
 
@@ -112,9 +114,13 @@ In the Scheduling Tab, set to Run Schedule:    1 sec
 
 You could set that to 1 sec, 30 sec, 1 min.
 
+
+image::runSimulator1or30.png[width=800]
+
+
 Include no extra spaces!
 
-Tab: Settings
+*Tab:* Settings
 
 Automatically Terminate Relationships:   [x] Success
 
@@ -122,11 +128,14 @@ Make sure you terminate so you can run.
 
 image::nifiTerminateRelationships.png[width=800]
 
-image::NiFiDataProvenance.png[width=800]
+
+
+
+You can then right click to Start this simulator runner.  You can press stop after a few seconds and look at the provenance to see that it has run a number of times and produced results.
 
 image::NiFiViewDataProvenance.png[width=800]
 
-image::runSimulator1or30.png[width=800]
+image::NiFiDataProvenance.png[width=800]
 
 
 [[lab_3, Lab3]]
