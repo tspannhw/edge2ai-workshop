@@ -990,3 +990,11 @@ http://hostname:10080/efm/swagger/
 ----
 
 . Hit the `DELETE - Delete the agent manifest specified by id` button, and in the id field, enter `agent-manifest-id`
+
+---
+
+if you get transfer relationship not specified in java
+
+just change the schema access strategy from inherited to from attribute in the json writter
+
+this will change in NiFi 1.11
