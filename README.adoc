@@ -998,3 +998,13 @@ if you get transfer relationship not specified in java
 just change the schema access strategy from inherited to from attribute in the json writter
 
 this will change in NiFi 1.11
+
+OR
+
+workaround
+
+add the new column in the schema
+
+in HWX Schema Registry
+
+if they add the new column in the Schema Registry it went through
